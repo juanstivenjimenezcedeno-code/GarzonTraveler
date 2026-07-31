@@ -1,0 +1,4 @@
+- [ ] Arreglar errores de llaves en `style.css` (bloques @media)
+- [ ] Eliminar/ajustar duplicados o secciones mal cerradas
+- [ ] Confirmar que el CSS queda parseable (sin errores de "se esperaba }" o "se esperaba un selector")
+- [ ] Probar carga de `index.html` y `balcon.html` (visualmente)
