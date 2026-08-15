@@ -1,6 +1,4 @@
-/* =========================================
-   ESTILOS GENERALES
-   ========================================= */
+/* ESTILOS GENERALES */
 * {
     margin: 0;
     padding: 0;
@@ -12,9 +10,7 @@ body {
     background: #f4f4f4;
 }
 
-/* =========================================
-   ENCABEZADO (HEADER)
-   ========================================= */
+/* ENCABEZADO */
 header {
     background: white;
     padding: clamp(8px, 1.5vw, 15px) clamp(10px, 3vw, 30px);
@@ -118,9 +114,7 @@ nav a {
     background: #f5f5f5;
 }
 
-/* =========================================
-   BANNER
-   ========================================= */
+/* BANNER */
 .banner {
     height: 350px;
     background-image: url("img/baner_fondo.jpeg");
@@ -155,9 +149,7 @@ nav a {
     padding: 10px 20px;
 }
 
-/* =========================================
-   CATEGORÍAS
-   ========================================= */
+/* CATEGORÍAS */
 .categorias {
     text-align: center;
     margin: 20px 0;
@@ -176,9 +168,7 @@ nav a {
     color: white;
 }
 
-/* =========================================
-   TARJETAS Y GRILLA DE LUGARES
-   ========================================= */
+/* TARJETAS Y GRILLA DE LUGARES */
 .lugares {
     width: 90%;
     margin: auto;

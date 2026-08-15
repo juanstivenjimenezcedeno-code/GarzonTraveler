@@ -1,6 +1,4 @@
-/* =========================================
-   CONFIGURACIÓN GENERAL
-========================================= */
+/* CONFIGURACIÓN GENERAL */
 
 * {
     margin: 0;
@@ -15,18 +13,14 @@ body {
 }
 
 
-/* =========================================
-   CONTENEDOR
-========================================= */
+/* CONTENEDOR */
 
 body {
     padding: 0 6%;
 }
 
 
-/* =========================================
-   HEADER
-========================================= */
+/* HEADER */
 
 .header {
     height: 100px;
@@ -111,9 +105,7 @@ body {
 }
 
 
-/* =========================================
-   CONTENIDO PRINCIPAL
-========================================= */
+/* CONTENIDO PRINCIPAL */
 
 .contenido {
     display: grid;
@@ -126,9 +118,7 @@ body {
 }
 
 
-/* =========================================
-   GALERÍA
-========================================= */
+/* GALERÍA */
 
 .galeria {
     position: relative;
@@ -248,9 +238,7 @@ body {
 }
 
 
-/* =========================================
-   COLUMNA DERECHA
-========================================= */
+/* COLUMNA DERECHA */
 
 .ruta {
     color: #888;
@@ -308,9 +296,7 @@ body {
 }
 
 
-/* =========================================
-   SERVICIOS
-========================================= */
+/* SERVICIOS */
 
 .servicios {
     display: grid;
@@ -345,9 +331,7 @@ body {
 }
 
 
-/* =========================================
-   INFORMACIÓN
-========================================= */
+/* INFORMACIÓN */
 
 .informacion {
     background: #edf6ea;
@@ -418,9 +402,7 @@ body {
 }
 
 
-/* =========================================
-   RECOMENDADOS
-========================================= */
+/* RECOMENDADOS */
 
 .recomendados {
     background: #fafaf8;
@@ -499,9 +481,7 @@ body {
 }
 
 
-/* =========================================
-   OPINIONES
-========================================= */
+/* OPINIONES */
 
 .opiniones {
     background: #fafaf8;
@@ -512,7 +492,7 @@ body {
 
     padding: 20px;
 
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .opinion {
@@ -576,9 +556,7 @@ body {
 }
 
 
-/* =========================================
-   SITIOS SIMILARES
-========================================= */
+/* SITIOS SIMILARES */
 
 .similares {
     margin: 35px 0 50px;
@@ -646,9 +624,7 @@ body {
 }
 
 
-/* =========================================
-   ADAPTACIÓN PARA TABLET
-========================================= */
+/* ADAPTACIÓN PARA TABLET */
 
 @media (max-width: 1000px) {
 
@@ -667,9 +643,7 @@ body {
 }
 
 
-/* =========================================
-   ADAPTACIÓN PARA CELULAR
-========================================= */
+/* ADAPTACIÓN PARA CELULAR */
 
 @media (max-width: 650px) {
 
@@ -749,10 +723,4 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
-}
-
-@media (max-width: 450px) {
-    .tarjetas-similares {
-        grid-template-columns: 1fr;
-    }
 }
