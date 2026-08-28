@@ -528,7 +528,7 @@ a {
     gap: 10px;
 }
 
-.reseña > img {
+.reseña>img {
 
     width: 35px;
 
@@ -779,7 +779,7 @@ a {
     background: white;
 }
 
-.sitio > img {
+.sitio>img {
 
     width: 100%;
 
@@ -790,7 +790,7 @@ a {
     display: block;
 }
 
-.sitio > div {
+.sitio>div {
 
     padding: 10px;
 }
