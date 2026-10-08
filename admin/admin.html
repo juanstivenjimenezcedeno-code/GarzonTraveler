@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>Garzón Traveler | Panel de Administración</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- BARRA LATERAL -->
+    <section class="sidebar">
+
+        <div class="logo">
+            <span>🌿</span>
+            <h2>Garzón Traveler</h2>
+        </div>
+
+        <nav>
+            <button class="menu-item active" data-section="dashboard">
+                <i class="fa-solid fa-chart-line"></i> <span>Dashboard</span>
+            </button>
+
+            <button class="menu-item" data-section="reservas">
+                <i class="fa-regular fa-calendar-days"></i> <span>Reservas</span>
+            </button>
+
+            <button class="menu-item" data-section="servicios">
+                <i class="fa-solid fa-hotel"></i> <span>Servicios ofrecidos</span>
+            </button>
+
+            <button class="menu-item" data-section="mensajes">
+                <i class="fa-regular fa-comment"></i> <span>Mensajes</span>
+            </button>
+
+            <button class="menu-item" data-section="reportes">
+                <i class="fa-regular fa-file-lines"></i> <span>Reportes</span>
+            </button>
+
+            <button class="menu-item" data-section="ajustes">
+                <i class="fa-solid fa-gear"></i> <span>Ajustes</span>
+            </button>
+        </nav>
+
+        <button class="logout">Cerrar sesión</button>
+
+    </section>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+
+        <!-- HEADER -->
+        <header class="topbar">
+
+            <div>
+                <h1 id="page-title">Dashboard</h1>
+                <p>Panel de administración</p>
+            </div>
+
+            <div class="admin-profile">
+                <div class="avatar">AD</div>
+
+                <div>
+                    <strong>Administrador</strong>
+                    <small>Garzón Traveler</small>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <section id="dashboard" class="section active">
+
+            <div class="welcome">
+                <div>
+                    <h2>¡Bienvenido al panel! 👋</h2>
+                    <p>Administra los servicios y reservas de Garzón Traveler.</p>
+                </div>
+
+                <button class="primary-btn" onclick="mostrarSeccion('servicios')">
+                    + Añadir servicio
+                </button>
+            </div>
+
+
+            <!-- ESTADÍSTICAS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-regular fa-calendar-days"></i></div>
+                    <div>
+                        <p>Reservas pendientes</p>
+                        <h3 id="statPendientes">8</h3>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-regular fa-square-check"></i></div>
+                    <div>
+                        <p>Reservas aceptadas</p>
+                        <h3 id="statAceptadas">24</h3>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-hotel"></i></div>
+                    <div>
+                        <p>Servicios ofrecidos</p>
+                        <h3 id="statServicios">12</h3>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-regular fa-comment"></i></div>
+                    <div>
+                        <p>Mensajes</p>
+                        <h3 id="statMensajes">5</h3>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- RESERVAS RECIENTES -->
+
+            <div class="content-card">
+
+                <div class="card-header">
+                    <div>
+                        <h2>Reservas pendientes</h2>
+                        <p>Solicitudes que necesitan atención.</p>
+                    </div>
+
+                    <button class="text-btn" onclick="mostrarSeccion('reservas')">
+                        Ver todas
+                    </button>
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Cliente</th>
+                                <th>Servicio</th>
+                                <th>Fecha</th>
+                                <th>Personas</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tablaDashboard">
+
+                            <tr>
+                                <td>María López</td>
+                                <td>Tour Río Magdalena</td>
+                                <td>15/09/2026</td>
+                                <td>3</td>
+                                <td>
+                                    <span class="status pending">Pendiente</span>
+                                </td>
+
+                                <td>
+                                    <button class="action accept">✓</button>
+                                    <button class="action reject">✕</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Carlos Pérez</td>
+                                <td>Hotel El Parque</td>
+                                <td>18/09/2026</td>
+                                <td>2</td>
+
+                                <td>
+                                    <span class="status pending">Pendiente</span>
+                                </td>
+
+                                <td>
+                                    <button class="action accept">✓</button>
+                                    <button class="action reject">✕</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Laura Torres</td>
+                                <td>Restaurante La Casona</td>
+                                <td>20/09/2026</td>
+                                <td>4</td>
+
+                                <td>
+                                    <span class="status pending">Pendiente</span>
+                                </td>
+
+                                <td>
+                                    <button class="action accept">✓</button>
+                                    <button class="action reject">✕</button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= RESERVAS ================= -->
+
+        <section id="reservas" class="section">
+
+            <div class="section-header">
+                <div>
+                    <h2>Reservas</h2>
+                    <p>Gestiona las reservas de tus clientes.</p>
+                </div>
+            </div>
+
+
+            <div class="tabs">
+
+                <button class="tab active" onclick="mostrarReservas('pendientes')">
+                    Pendientes
+                </button>
+
+                <button class="tab" onclick="mostrarReservas('aceptadas')">
+                    Aceptadas
+                </button>
+
+            </div>
+
+
+            <div class="content-card">
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Cliente</th>
+                                <th>Servicio</th>
+                                <th>Fecha</th>
+                                <th>Personas</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tablaReservas">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= SERVICIOS ================= -->
+
+        <section id="servicios" class="section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Servicios ofrecidos</h2>
+                    <p>Administra los servicios disponibles para los viajeros.</p>
+                </div>
+
+                <button class="primary-btn" onclick="mostrarFormularioServicio()">
+                    + Añadir servicio
+                </button>
+
+            </div>
+
+
+            <!-- FORMULARIO -->
+
+            <div id="formServicio" class="content-card form-card hidden">
+
+                <div class="card-header">
+
+                    <div>
+                        <h2>Nuevo servicio</h2>
+                        <p>Completa la información del servicio.</p>
+                    </div>
+
+                    <button class="close-btn" onclick="ocultarFormularioServicio()">
+                        ✕
+                    </button>
+
+                </div>
+
+
+                <form class="formulario" id="servicioForm"> /*la class tal ves no tenga q estar ahi vamos a probarlo por ahora */
+
+                    <div class="form-group">
+
+                        <label for="nombreServicio">
+                            Nombre del servicio
+                        </label>
+
+                        <input type="text" id="nombreServicio" placeholder="Ej: Tour por el centro de Garzón" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="descripcionServicio">
+                            Descripción
+                        </label>
+
+                        <textarea id="descripcionServicio" rows="5" placeholder="Describe el servicio..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="precioServicio">
+                                Precio
+                            </label>
+
+                            <div class="price-input">
+
+                                <span>$</span>
+
+                                <input type="number" id="precioServicio" min="0" placeholder="50000" required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="tipoServicio">
+                                Tipo de servicio
+                            </label>
+
+                            <select id="tipoServicio" required>
+
+                                <option value="">
+                                    Selecciona un tipo
+                                </option>
+
+                                <option value="turismo">
+                                    Turismo
+                                </option>
+
+                                <option value="hoteleria">
+                                    Hotelería
+                                </option>
+
+                                <option value="restaurante">
+                                    Restaurante
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button type="button" class="secondary-btn" onclick="ocultarFormularioServicio()">
+                            Cancelar
+                        </button>
+
+                        <button type="submit" class="primary-btn" id="btn-guardar">
+                            Guardar servicio
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- LISTADO DE SERVICIOS -->
+
+            <div class="services-grid" id="servicesGrid">
+
+                <div class="service-card">
+
+                    <div class="service-image tourism">
+                        🌳
+                    </div>
+
+                    <div class="service-info">
+
+                        <span class="service-type">
+                            Turismo
+                        </span>
+
+                        <h3>Tour Río Magdalena</h3>
+
+                        <p>
+                            Recorrido turístico por los principales
+                            atractivos naturales de la región.
+                        </p>
+
+                        <strong>$80.000</strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-image hotel">
+                        🏨
+                    </div>
+
+                    <div class="service-info">
+
+                        <span class="service-type">
+                            Hotelería
+                        </span>
+
+                        <h3>Hotel El Parque</h3>
+
+                        <p>
+                            Habitaciones cómodas ubicadas en el
+                            centro del municipio.
+                        </p>
+
+                        <strong>$120.000</strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-image restaurant">
+                        🍽️
+                    </div>
+
+                    <div class="service-info">
+
+                        <span class="service-type">
+                            Restaurante
+                        </span>
+
+                        <h3>Restaurante La Casona</h3>
+
+                        <p>
+                            Gastronomía tradicional y platos típicos
+                            de la región.
+                        </p>
+
+                        <strong>$35.000</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= MENSAJES ================= -->
+
+        <section id="mensajes" class="section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Mensajes</h2>
+                    <p>Comunícate con tus clientes.</p>
+                </div>
+
+            </div>
+
+
+            <div class="messages-container">
+
+                <div class="message">
+
+                    <div class="message-avatar">
+                        ML
+                    </div>
+
+                    <div class="message-content">
+
+                        <strong>María López</strong>
+
+                        <span>Hoy, 4:35 PM</span>
+
+                        <p>
+                            Hola, quisiera conocer más información
+                            sobre el tour.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="message">
+
+                    <div class="message-avatar">
+                        CP
+                    </div>
+
+                    <div class="message-content">
+
+                        <strong>Carlos Pérez</strong>
+
+                        <span>Ayer, 8:20 PM</span>
+
+                        <p>
+                            ¿El hotel tiene disponibilidad para
+                            este fin de semana?
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= REPORTES ================= -->
+
+        <section id="reportes" class="section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Reportes</h2>
+                    <p>Consulta el resumen de actividad.</p>
+                </div>
+
+            </div>
+
+
+            <div class="reports-grid">
+
+                <div class="report-card">
+                    <span>📈</span>
+                    <h3>32</h3>
+                    <p>Reservas este mes</p>
+                </div>
+
+                <div class="report-card">
+                    <span>💰</span>
+                    <h3>$3.850.000</h3>
+                    <p>Ingresos estimados</p>
+                </div>
+
+                <div class="report-card">
+                    <span>👥</span>
+                    <h3>87</h3>
+                    <p>Clientes atendidos</p>
+                </div>
+
+                <div class="report-card">
+                    <span>⭐</span>
+                    <h3>4.8</h3>
+                    <p>Calificación promedio</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= AJUSTES ================= -->
+
+        <section id="ajustes" class="section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Ajustes</h2>
+                    <p>Configura tu cuenta y negocio.</p>
+                </div>
+
+            </div>
+
+
+            <div class="content-card settings-card">
+
+                <div class="setting">
+
+                    <div>
+                        <strong>Notificaciones</strong>
+
+                        <p>
+                            Recibir avisos cuando llegue una nueva reserva.
+                        </p>
+                    </div>
+
+                    <label class="switch">
+
+                        <input type="checkbox" checked>
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="setting">
+
+                    <div>
+                        <strong>Mensajes</strong>
+
+                        <p>
+                            Permitir que los clientes envíen mensajes.
+                        </p>
+                    </div>
+
+                    <label class="switch">
+
+                        <input type="checkbox" checked>
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="setting">
+
+                    <div>
+
+                        <strong>Disponibilidad</strong>
+
+                        <p>
+                            Mostrar tus servicios públicamente.
+                        </p>
+
+                    </div>
+
+                    <label class="switch">
+
+                        <input type="checkbox" checked>
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="admin.js"></script>
+    <script src="añadirservicio.js"></script>
+
+</body>
+
+</html>
