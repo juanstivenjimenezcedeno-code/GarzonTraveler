@@ -17,7 +17,6 @@
 body {
     font-family: Georgia, "Times New Roman", serif;
     min-height: 100vh;
-    background-image: url(img-fondo/fondo.jpeg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -28,7 +27,7 @@ body {
 }
 
 .registro-container {
-    margin-left: -120px;
+    margin-left: 0;
 }
 
 a {
@@ -47,7 +46,7 @@ a {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .login-container {
@@ -120,6 +119,11 @@ a {
 }
 
 .logo-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     margin-bottom: 18px;
 }

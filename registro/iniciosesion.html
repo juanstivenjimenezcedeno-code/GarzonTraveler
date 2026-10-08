@@ -11,8 +11,8 @@
 <body>
     <div class="login-container">
         <div class="auth-tabs">
-            <button class="tab-btn active" type="button" data-target="login-panel">Iniciar sesión</button>
-            <button class="tab-btn" type="button" data-target="registro-panel">Registrarse</button>
+            <button class="tab-btn active" type="button">Iniciar sesión</button>
+            <button class="tab-btn" type="button" data-link="registro.html">Registrarse</button>
         </div>
 
         <div class="auth-panel active" id="login-panel">
@@ -22,42 +22,49 @@
                     <circle cx="46" cy="16" r="7" fill="#e6b800" />
                     <path d="M2 46 L20 20 L30 34 L38 24 L58 46 Z" fill="#1e4d2b" />
                     <path d="M20 20 L30 34 L24 34 L14 46 L2 46 Z" fill="#3a7a3f" />
-                    <path d="M48 40 C48 34 54 34 54 40 C54 44 48 46 48 46 C48 46 42 44 42 40 C42 34 48 34 48 40 Z" fill="#4a8a3f"/>
+                    <path d="M48 40 C48 34 54 34 54 40 C54 44 48 46 48 46 C48 46 42 44 42 40 C42 34 48 34 48 40 Z"
+                        fill="#4a8a3f" />
                 </svg>
                 <h1 class="logo-nombre">GARZÓN <span>TRAVELER</span></h1>
                 <p class="logo-tagline">Descubre, vive, recuerda.</p>
                 <div class="logo-divider"><span></span><span class="hoja">❧</span><span></span></div>
             </div>
 
-            <form class="formulario">
+            <form class="formulario" id="loginForm">
                 <div class="formulario-espacio">
                     <span class="icono-circulo">
-                        <svg viewBox="0 0 24 24"><path fill="#fff" d="M2 5.5C2 4.7 2.7 4 3.5 4h17c.8 0 1.5.7 1.5 1.5v13c0 .8-.7 1.5-1.5 1.5h-17C2.7 20 2 19.3 2 18.5v-13zM4 6l8 6 8-6"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path fill="#fff"
+                                d="M2 5.5C2 4.7 2.7 4 3.5 4h17c.8 0 1.5.7 1.5 1.5v13c0 .8-.7 1.5-1.5 1.5h-17C2.7 20 2 19.3 2 18.5v-13zM4 6l8 6 8-6" />
+                        </svg>
                     </span>
                     <div class="input-texto">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+                        <label for="correo">Correo</label>
+                        <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo" required>
                     </div>
                 </div>
                 <div class="formulario-espacio">
                     <span class="icono-circulo">
-                        <svg viewBox="0 0 24 24"><path fill="#fff" d="M6 10V8a6 6 0 1 1 12 0v2h1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h1zm2 0h8V8a4 4 0 1 0-8 0v2z"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path fill="#fff"
+                                d="M6 10V8a6 6 0 1 1 12 0v2h1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h1zm2 0h8V8a4 4 0 1 0-8 0v2z" />
+                        </svg>
                     </span>
                     <div class="input-texto">
                         <label for="password">Contraseña</label>
-                        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+                        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña"
+                            required>
                     </div>
                 </div>
 
                 <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
 
-                <button type="submit" class="boton-iniciarsesion texto-enlace">
-                <a href="/index.html">inisiar sesion</a>
-                </button>
+                <button type="submit" class="boton-iniciarsesion texto-enlace">Iniciar sesión</button>
             </form>
 
             <div class="divisor">
-                <span></span><p>o continúa con</p><span></span>
+                <span></span>
+                <p>o continúa con</p><span></span>
             </div>
 
             <div class="redes-login">
@@ -71,71 +78,9 @@
                 </button>
             </div>
         </div>
-
-        <div class="auth-panel" id="registro-panel">
-            <div class="titulo-login">Registrarse</div>
-
-            <form class="formulario-registro">
-                <div class="input-group">
-                    <span class="icono-circulo">
-                        <svg viewBox="0 0 24 24"><path fill="#fff" d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2.5c-3.3 0-9.9 1.6-9.9 4.9v2.4h19.8v-2.4c0-3.3-6.6-4.9-9.9-4.9z"/></svg>
-                    </span>
-                    <div class="input-texto">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
-                    </div>
-                </div>
-
-                <div class="input-group">
-                    <span class="icono-circulo">
-                        <svg viewBox="0 0 24 24"><path fill="#fff" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>
-                    </span>
-                    <div class="input-texto">
-                        <label for="telefono">Número Telefónico</label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número" required>
-                    </div>
-                </div>
-
-                <div class="input-group">
-                    <span class="icono-circulo">
-                        <svg viewBox="0 0 24 24"><path fill="#fff" d="M2 5.5C2 4.7 2.7 4 3.5 4h17c.8 0 1.5.7 1.5 1.5v13c0 .8-.7 1.5-1.5 1.5h-17C2.7 20 2 19.3 2 18.5v-13zM4 6l8 6 8-6"/></svg>
-                    </span>
-                    <div class="input-texto">
-                        <label for="registro-email">Email</label>
-                        <input type="email" id="registro-email" name="registro-email" placeholder="Ingresa tu correo" required>
-                    </div>
-                </div>
-
-                <div class="input-group">
-                    <span class="icono-circulo">
-                        <svg viewBox="0 0 24 24"><path fill="#fff" d="M6 10V8a6 6 0 1 1 12 0v2h1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h1zm2 0h8V8a4 4 0 1 0-8 0v2z"/></svg>
-                    </span>
-                    <div class="input-texto">
-                        <label for="registro-password">Contraseña</label>
-                        <input type="password" id="registro-password" name="registro-password" placeholder="Crea una contraseña" required>
-                    </div>
-                </div>
-
-                <button type="submit" class="registro-button">Crear cuenta</button>
-            </form>
-        </div>
     </div>
 
-    <script>
-        const tabButtons = document.querySelectorAll('.tab-btn');
-        const panels = document.querySelectorAll('.auth-panel');
-
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const target = button.dataset.target;
-
-                tabButtons.forEach(btn => btn.classList.toggle('active', btn === button));
-                panels.forEach(panel => {
-                    panel.classList.toggle('active', panel.id === target);
-                });
-            });
-        });
-    </script>
+    <script src="inisiosesion.js"></script>
 </body>
 
 </html>
