@@ -4,10 +4,58 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg: #f5f7f6;
+    --bg-soft: #edf5ef;
+    --surface: #ffffff;
+    --surface-alt: #f7f9f7;
+    --surface-soft: #e5f2e9;
+    --surface-strong: #dcefe3;
+    --border: #e5e9e6;
+    --text: #26332d;
+    --text-soft: #66716b;
+    --text-muted: #7b8580;
+    --primary: #2d8054;
+    --primary-dark: #246b45;
+    --primary-soft: #e4f1e8;
+    --warning-bg: #fff4d6;
+    --warning-text: #a77900;
+    --success-bg: #e2f4e8;
+    --success-text: #28764c;
+    --danger-bg: #ffe7e7;
+    --danger-text: #bd4141;
+    --toggle-off: #ccd3ce;
+    --toggle-on: #318158;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f5f7f6;
-    color: #26332d;
+    background: var(--bg);
+    color: var(--text);
+}
+
+body.dark-mode {
+    --bg: #0d1715;
+    --bg-soft: #111f1b;
+    --surface: #13211d;
+    --surface-alt: #182b27;
+    --surface-soft: #19352e;
+    --surface-strong: #21493b;
+    --border: #243d39;
+    --text: #edf7f3;
+    --text-soft: #c5d4cf;
+    --text-muted: #9fb3ae;
+    --primary: #60d5a0;
+    --primary-dark: #3bbf86;
+    --primary-soft: #183a2d;
+    --warning-bg: #3b2e17;
+    --warning-text: #f0c46b;
+    --success-bg: #193b2b;
+    --success-text: #8de5b3;
+    --danger-bg: #3b1e22;
+    --danger-text: #ff9aa0;
+    --toggle-off: #37524d;
+    --toggle-on: #5dcaa0;
 }
 
 
@@ -190,6 +238,240 @@ body {
     font-weight: bold;
 }
 
+body.dark-mode .sidebar,
+body.dark-mode .stat-card,
+body.dark-mode .content-card,
+body.dark-mode .service-card,
+body.dark-mode .messages-container,
+body.dark-mode .report-card,
+body.dark-mode .main-content,
+body.dark-mode .welcome,
+body.dark-mode .message,
+body.dark-mode .setting,
+body.dark-mode .price-input,
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea,
+body.dark-mode .form-group select,
+body.dark-mode .secondary-btn,
+body.dark-mode .logout,
+body.dark-mode .service-image {
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+body.dark-mode .sidebar {
+    background: var(--surface);
+    border-right-color: var(--border);
+}
+
+body.dark-mode .logo h2,
+body.dark-mode .topbar h1,
+body.dark-mode .welcome h2,
+body.dark-mode .section-header h2,
+body.dark-mode .card-header h2,
+body.dark-mode .report-card h3,
+body.dark-mode .service-info h3,
+body.dark-mode .message-content strong,
+body.dark-mode .setting strong,
+body.dark-mode .content-card strong,
+body.dark-mode .topbar p,
+body.dark-mode .welcome p,
+body.dark-mode .card-header p,
+body.dark-mode .stat-card p,
+body.dark-mode .section-header p,
+body.dark-mode .report-card p,
+body.dark-mode .setting p,
+body.dark-mode .message-content p,
+body.dark-mode .service-info p,
+body.dark-mode .menu-item,
+body.dark-mode .menu-item span,
+body.dark-mode .tab,
+body.dark-mode .service-type,
+body.dark-mode .text-btn,
+body.dark-mode .form-group label,
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea,
+body.dark-mode .form-group select,
+body.dark-mode .report-card p,
+body.dark-mode .message-content span,
+body.dark-mode .service-info strong,
+body.dark-mode .admin-profile small,
+body.dark-mode .field label {
+    color: var(--text);
+}
+
+body.dark-mode .menu-item {
+    color: var(--text-soft);
+}
+
+body.dark-mode .menu-item:hover {
+    background: var(--bg-soft);
+}
+
+body.dark-mode .menu-item.active {
+    background: var(--primary-soft);
+    color: var(--primary);
+}
+
+body.dark-mode .main-content {
+    background: var(--bg);
+}
+
+body.dark-mode .topbar p,
+body.dark-mode .welcome p,
+body.dark-mode .card-header p,
+body.dark-mode .section-header p,
+body.dark-mode .stat-card p,
+body.dark-mode .service-info p,
+body.dark-mode .message-content p,
+body.dark-mode .setting p,
+body.dark-mode .report-card p,
+body.dark-mode .admin-profile small,
+body.dark-mode .message-content span {
+    color: var(--text-muted);
+}
+
+body.dark-mode .welcome,
+body.dark-mode .content-card,
+body.dark-mode .stat-card,
+body.dark-mode .report-card,
+body.dark-mode .messages-container,
+body.dark-mode .service-card,
+body.dark-mode .stat-icon,
+body.dark-mode .secondary-btn,
+body.dark-mode .logout,
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea,
+body.dark-mode .form-group select,
+body.dark-mode .price-input,
+body.dark-mode .service-image {
+    background: var(--surface);
+    border-color: var(--border);
+}
+
+body.dark-mode .stat-card,
+body.dark-mode .content-card,
+body.dark-mode .report-card,
+body.dark-mode .messages-container,
+body.dark-mode .service-card {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+body.dark-mode .avatar {
+    background: var(--surface-strong);
+    color: var(--primary);
+}
+
+body.dark-mode .message-avatar {
+    background: var(--primary-soft);
+    color: var(--primary);
+}
+
+body.dark-mode .stat-icon,
+body.dark-mode .service-image {
+    background: var(--bg-soft);
+}
+
+body.dark-mode .primary-btn {
+    background: var(--primary);
+    color: #0d1715;
+}
+
+body.dark-mode .primary-btn:hover {
+    background: var(--primary-dark);
+}
+
+body.dark-mode .text-btn,
+body.dark-mode .tab.active,
+body.dark-mode .service-type,
+body.dark-mode .status.accepted,
+body.dark-mode .accept,
+body.dark-mode .status.pending,
+body.dark-mode .status.rejected,
+body.dark-mode .reject {
+    color: var(--primary);
+}
+
+body.dark-mode .logout {
+    background: var(--danger-bg);
+    color: var(--danger-text);
+}
+
+body.dark-mode th {
+    background: var(--surface-alt);
+    color: var(--text-muted);
+}
+
+body.dark-mode td {
+    border-color: var(--border);
+}
+
+body.dark-mode .status.pending {
+    background: var(--warning-bg);
+    color: var(--warning-text);
+}
+
+body.dark-mode .status.accepted {
+    background: var(--success-bg);
+    color: var(--success-text);
+}
+
+body.dark-mode .status.rejected {
+    background: var(--danger-bg);
+    color: var(--danger-text);
+}
+
+body.dark-mode .accept {
+    background: var(--success-bg);
+}
+
+body.dark-mode .reject {
+    background: var(--danger-bg);
+}
+
+body.dark-mode .price-input span {
+    background: var(--bg-soft);
+    color: var(--text-soft);
+}
+
+body.dark-mode .switch span {
+    background: var(--toggle-off);
+}
+
+body.dark-mode .switch input:checked + span {
+    background: var(--toggle-on);
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group textarea:focus,
+body.dark-mode .form-group select:focus {
+    border-color: var(--primary);
+}
+
+body.dark-mode .tab.active {
+    border-bottom-color: var(--primary);
+}
+
+body.dark-mode .setting {
+    border-bottom-color: var(--border);
+}
+
+body.dark-mode .message {
+    border-bottom-color: var(--border);
+}
+
+body.dark-mode .report-card span,
+body.dark-mode .stat-icon i,
+body.dark-mode .menu-item i,
+body.dark-mode .logout,
+body.dark-mode .text-btn,
+body.dark-mode .action,
+body.dark-mode .primary-btn,
+body.dark-mode .logo span,
+body.dark-mode .avatar,
+body.dark-mode .message-avatar,
+body.dark-mode .menu-item.active {
+    filter: saturate(1.05);
+}
 
 /* ================= SECTIONS ================= */
 

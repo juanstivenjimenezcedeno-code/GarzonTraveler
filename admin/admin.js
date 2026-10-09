@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const preferDarkMode = localStorage.getItem('darkMode') === 'true';
+
+    if (darkModeToggle) {
+        darkModeToggle.checked = preferDarkMode;
+        document.body.classList.toggle('dark-mode', preferDarkMode);
+    }
+
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('change', () => {
+            const enabled = darkModeToggle.checked;
+            document.body.classList.toggle('dark-mode', enabled);
+            localStorage.setItem('darkMode', enabled ? 'true' : 'false');
+        });
+    }
+
     const menuItems = document.querySelectorAll('.menu-item');
     const sections = document.querySelectorAll('.section');
     const pageTitle = document.getElementById('page-title');
